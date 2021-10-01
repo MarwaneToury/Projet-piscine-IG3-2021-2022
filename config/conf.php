@@ -1,5 +1,7 @@
 <?php
-class Conf {
+
+class Conf
+{
     static private $debug = True;
 
     static private $databases = array(
@@ -9,24 +11,30 @@ class Conf {
         'password' => 'Buis-Les-Baronnies26170'
     );
 
-    static public function getDebug() {
+    static public function getDebug()
+    {
         return self::$debug;
     }
 
-    static public function getLogin() {
+    static public function getLogin()
+    {
         return self::$databases['login'];
     }
 
-    static public function getHostname() {
+    static public function getHostname()
+    {
         return self::$databases['hostname'];
     }
 
-    static public function getDatabase() {
+    static public function getDatabase()
+    {
         return self::$databases['database'];
     }
 
-    static public function getPassword() {
+    static public function getPassword()
+    {
         return self::$databases['password'];
     }
 }
+
 ?>
