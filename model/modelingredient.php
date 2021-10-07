@@ -1,5 +1,7 @@
 <?php
-require_once "model.php";
+require_once File::build_path(array("model", "model.php"));
+
+//require_once "model.php";
 
 class ModelIngredient extends model
 {
@@ -18,6 +20,42 @@ class ModelIngredient extends model
     {
         return $this->code_ING;
     }
+
+    public function getLibelleING()
+    {
+        return $this->libelle_ING;
+    }
+
+    public function getPrixING()
+    {
+        return $this->prix_ING;
+    }
+
+    public function getEstAllergeneING()
+    {
+        return $this->estAllergene_ING;
+    }
+
+    public function getQuantiteStockING()
+    {
+        return $this->quantiteStock_ING;
+    }
+
+    public function getCodeUNI()
+    {
+        return $this->code_UNI;
+    }
+
+    public function getCodeTVA()
+    {
+        return $this->code_TVA;
+    }
+
+    public function getCodeCAT()
+    {
+        return $this->code_CAT;
+    }
+
 
     public function __construct($data = NULL)
     {
