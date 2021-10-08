@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Main fiche technique</title>
+    <link rel="stylesheet" type="text/css" href="Page%20affichage%20fiche%20technique.css">
+</head>
+<body>
+<div>
+    <div class="NomFT" style="width: 200px;  padding-top:10px; padding-bottom:10px;border: 2px solid gray; text-align: center;background: #ffffff;"> Nom de la Fiche Technique</div>
+</div>
+<div class="boutons">
+    <button disabled>SUPPRIMER</button>
+    <button disabled class="Editer" onclick="window.location.href = 'Page affichage fiche technique.html';">EDITER</button>
+    <button class="Créer" onclick="window.location.href = 'Page création fiche technique';">CREER</button>
+</div>
+<div class="Progression" style="width: 600px;  padding-top:10px; padding-bottom:10px;border: 2px solid gray; text-align: center;background: #ffffff;"> Progression</div>
+<div class="Description" style="width: 600px;  padding-top:10px; padding-bottom:10px;border: 2px solid gray; text-align: center;background: #ffffff;"> Description des ingrédients</div>
+<div class="PrixEtc" style="width: 100px;  padding-top:10px; padding-bottom:10px;border: 2px solid gray; text-align: center;background: #ffffff;"> Prix: ...</div>
+<div class="AffFichesTechniques" style="overflow:scroll; border:#000000 1px solid; width: 200px; height: 200px;">
+</div>
+<div class="BoutonsBas" >
+    <button disabled class="imprimerFT">Imprimer Fiche Technique</button>
+    <button disabled class="imprimerEtiquette">Imprimer Etiquette</button>
+</div>
+<div class="NbCouverts">
+    <label for="Couverts">Nombre de couverts:</label>
+    <input class="Couverts" type="number" id="Couverts" placeholder="ex:6" name="Couverts" required minlength="4"  size="60">
+</div>
+</body>
+</html>
