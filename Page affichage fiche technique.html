@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Page affichage fiche technique</title>
-    <link rel="stylesheet" type="text/css" href="CSS/Page affichage fiche technique.css">
+    <link rel="stylesheet" type="text/css" href="Page affichage fiche technique.css">
 </head>
 <body>
 <div class="Affichage" id="pageAffichage">
-    <input type="number" id="Couverts" placeholder="Nombre de couverts" name="Couverts" required
+    <div class="NbCouverts">
+        <label for="Couverts">Nombre de couverts:</label>
+        <input class="Couverts" type="number" id="Couverts" placeholder="ex:6" name="Couverts" required
            minlength="4"  size="60">
+    </div>
+
     <div class="boutons">
         <button>SUPPRIMER</button>
-        <button onclick="window.location.href = 'Page affichage fiche technique.html';">EDITER</button>
-        <button onclick="window.location.href = 'Page création fiche technique';">CREER</button>
+        <button class="Editer" onclick="window.location.href = 'Page affichage fiche technique.html';">EDITER</button>
+        <button class="Créer" onclick="window.location.href = 'Page création fiche technique';">CREER</button>
     </div>
-    <input type="text" id="Progression" placeholder="Progression de la fiche technique" name="Progression" required
-           minlength="4"  size="60">
-    <div class="Description" style="width: 400px;  padding-top:10px; padding-bottom:10px;border: 2px solid #adadad; text-align: center;background: #ffffff;"> Description des ingrédients</div>
-    <div class="PrixEtc" style="width: 100px;  padding-top:10px; padding-bottom:10px;border: 2px solid #adadad; text-align: center;background: #ffffff;"> Prix: ...</div>
-    <div style="overflow:scroll; border:#000000 1px solid; width: 200px; height: 200px;">
+    <div class="Progression" style="width: 600px;  padding-top:10px; padding-bottom:10px;border: 2px solid gray; text-align: center;background: #ffffff;"> Progression</div>
+    <div class="Description" style="width: 600px;  padding-top:10px; padding-bottom:10px;border: 2px solid gray; text-align: center;background: #ffffff;"> Description des ingrédients</div>
+    <div class="PrixEtc" style="width: 100px;  padding-top:10px; padding-bottom:10px;border: 2px solid gray; text-align: center;background: #ffffff;"> Prix: ...</div>
+    <div class="AffFichesTechniques" style="overflow:scroll; border:#000000 1px solid; width: 200px; height: 200px;">
     </div>
-    <div>
+    <div class="BoutonsBas" >
         <button class="imprimerFT">Imprimer Fiche Technique</button>
         <button class="imprimerEtiquette">Imprimer Etiquette</button>
+    </div>
+    <div>
+        <div class="NomFT" style="width: 200px;  padding-top:10px; padding-bottom:10px;border: 2px solid gray; text-align: center;background: #ffffff;"> Nom de la Fiche Technique</div>
+
     </div>
 </div>
 </body>
