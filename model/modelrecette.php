@@ -21,6 +21,51 @@ class modelrecette extends model
         return $this->Code_REC;
     }
 
+    public function getCout_REC()
+    {
+        return $this->Cout_REC;
+    }
+
+    public function getCoeffCout_REC()
+    {
+        return $this->CoeffCout_REC;
+    }
+
+    public function getAssaisonement_REC()
+    {
+        return $this->Assaisonement_REC;
+    }
+
+    public function getCoutPersonnel_REC()
+    {
+        return $this->CoutPersonnel_REC;
+    }
+
+    public function getChargesSup_REC()
+    {
+        return $this->ChargesSup_REC;
+    }
+
+    public function getLibelle_REC()
+    {
+        return $this->Libelle_REC;
+    }
+
+    public function getProgression_REC()
+    {
+        return $this->Progression_REC;
+    }
+
+    public function getCode_CAT2()
+    {
+        return $this->Code_CAT2;
+    }
+
+    public function getCode_AUT()
+    {
+        return $this->Code_AUT;
+    }
+
     public function __construct($data = NULL)
     {
         if (!is_null($data)) {

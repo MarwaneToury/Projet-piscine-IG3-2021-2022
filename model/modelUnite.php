@@ -13,6 +13,11 @@ class modelUnite extends model
         return $this->Code_UNI;
     }
 
+    public function getLibelle_UNI()
+    {
+        return $this->Libelle_UNI;
+    }
+
     public function __construct($data = NULL)
     {
         if (!is_null($data)) {

@@ -20,6 +20,11 @@ class modelUtiliser extends model
         return $this->Code_REC;
     }
 
+    public function getQuantiteNecessaire()
+    {
+        return $this->QuantiteNecessaire;
+    }
+
     public function __construct($data = NULL)
     {
         if (!is_null($data)) {

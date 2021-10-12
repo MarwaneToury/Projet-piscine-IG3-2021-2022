@@ -13,6 +13,11 @@ class modelAuteur extends model
         return $this->Code_AUT;
     }
 
+    public function getNom_AUT()
+    {
+        return $this->Nom_AUT;
+    }
+
     public function __construct($data = NULL)
     {
         if (!is_null($data)) {

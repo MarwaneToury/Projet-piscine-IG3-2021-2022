@@ -13,6 +13,11 @@ class modelReutiliser extends model
         return $this->Code_REC;
     }
 
+    public function getCode_REC_1()
+    {
+        return $this->Code_REC_1;
+    }
+
     public function __construct($data = NULL)
     {
         if (!is_null($data)) {

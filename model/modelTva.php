@@ -13,6 +13,11 @@ class modelTva extends model
         return $this->Code_TVA;
     }
 
+    public function getValeur_TVA()
+    {
+        return $this->Valeur_TVA;
+    }
+
     public function __construct($data = NULL)
     {
         if (!is_null($data)) {

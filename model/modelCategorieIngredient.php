@@ -13,6 +13,11 @@ class modelCategorieIngredient extends model
         return $this->Code_CAT;
     }
 
+    public function getLibelle_CAT()
+    {
+        return $this->Libelle_CAT;
+    }
+
     public function __construct($data = NULL)
     {
         if (!is_null($data)) {

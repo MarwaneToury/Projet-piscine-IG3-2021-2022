@@ -13,6 +13,11 @@ class modelCategorie extends model
         return $this->Code_CAT2;
     }
 
+    public function getLibelle_CAT2()
+    {
+        return $this->Libelle_CAT2;
+    }
+
     public function __construct($data = NULL)
     {
         if (!is_null($data)) {
