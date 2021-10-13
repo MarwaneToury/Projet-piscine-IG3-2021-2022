@@ -3,16 +3,16 @@ require_once "model.php";
 
 class modelrecette extends model
 {
-    private Code_REC;
-    private Cout_REC;
-    private CoeffCout_REC;
-    private Assaisonement_REC;
-    private CoutPersonnel_REC;
-    private ChargesSup_REC;
-    private Libelle_REC;
-    private Progression_REC;
-    private Code_CAT2;
-    private Code_AUT;
+    private $Code_REC;
+    private $Cout_REC;
+    private $CoeffCout_REC;
+    private $Assaisonement_REC;
+    private $CoutPersonnel_REC;
+    private $ChargesSup_REC;
+    private $Libelle_REC;
+    private $Progression_REC;
+    private $Code_CAT2;
+    private $Code_AUT;
     protected static $object = "Recette";
     protected static $primary = "Code_REC";
 

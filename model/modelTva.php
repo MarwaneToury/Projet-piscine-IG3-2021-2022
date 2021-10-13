@@ -3,8 +3,8 @@ require_once "model.php";
 
 class modelTva extends model
 {
-    private Code_TVA;
-    private Valeur_TVA;
+    private $Code_TVA;
+    private $Valeur_TVA;
     protected static $object = "Tva";
     protected static $primary = "Code_TVA";
 

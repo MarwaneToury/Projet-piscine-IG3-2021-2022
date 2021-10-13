@@ -3,12 +3,12 @@ require_once "model.php";
 
 class modelUtiliser extends model
 {
-    private Code_ING;
-    private Code_REC;
-    private QuantiteNecessaire;
+    private $Code_ING;
+    private $Code_REC;
+    private $QuantiteNecessaire;
     protected static $object = "Utiliser";
     protected static $primary = "Code_ING";
-    protected static $primary2 = "Code_REC"
+    protected static $primary2 = "Code_REC";
 
     public function getCode_ING()
     {

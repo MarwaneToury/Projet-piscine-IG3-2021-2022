@@ -3,8 +3,8 @@ require_once "model.php";
 
 class modelUnite extends model
 {
-    private Code_UNI;
-    private Libelle_UNI;
+    private $Code_UNI;
+    private $Libelle_UNI;
     protected static $object = "Unite";
     protected static $primary = "Code_UNI";
 

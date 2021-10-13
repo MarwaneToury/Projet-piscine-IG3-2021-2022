@@ -3,8 +3,8 @@ require_once "model.php";
 
 class modelAuteur extends model
 {
-    private Nom_AUT;
-    private Code_AUT;
+    private $Nom_AUT;
+    private $Code_AUT;
     protected static $object = "Auteur";
     protected static $primary = "Code_AUT";
 

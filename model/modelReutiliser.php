@@ -3,8 +3,8 @@ require_once "model.php";
 
 class modelReutiliser extends model
 {
-    private Code_REC;
-    private Code_REC_1;
+    private $Code_REC;
+    private $Code_REC_1;
     protected static $object = "Reutiliser";
     protected static $primary = "Code_REC";
 

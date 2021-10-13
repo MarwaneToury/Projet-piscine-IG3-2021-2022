@@ -3,8 +3,8 @@ require_once "model.php";
 
 class modelCategorieIngredient extends model
 {
-    private Code_CAT;
-    private Libelle_CAT;
+    private $Code_CAT;
+    private $Libelle_CAT;
     protected static $object = "CategorieIngredient";
     protected static $primary = "Code_CAT";
 
