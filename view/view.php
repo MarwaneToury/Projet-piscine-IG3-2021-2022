@@ -6,9 +6,9 @@
 </head>
 <header style="border: 2px solid black;text-align:center;">
     <h3>
-        <a href='index.php?controller=voiture'>Liste des voitures</a>
-        <a href='index.php?controller=utilisateur'>Liste des utilisateurs</a>
-        <a href='index.php?controller=utilisateur&action=preference'>Préférence</a>
+        <a href='index.php?controller=ING'>Liste des ingrédients</a>
+<!--        <a href='index.php?controller=utilisateur'>Liste des utilisateurs</a>-->
+<!--        <a href='index.php?controller=utilisateur&action=preference'>Préférence</a>-->
     </h3>
 </header>
 <body>

@@ -11,3 +11,4 @@ foreach ($tab_i as $i) {
         </a>
     </p>";
 }
+//TODO: echo l'ajout d'un ingrédient ?
