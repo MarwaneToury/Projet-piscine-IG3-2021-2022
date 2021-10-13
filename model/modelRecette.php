@@ -1,7 +1,7 @@
 <?php 
 require_once "model.php";
 
-class modelrecette extends model
+class modelRecette extends model
 {
     private $Code_REC;
     private $Cout_REC;

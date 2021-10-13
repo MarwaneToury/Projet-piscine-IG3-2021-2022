@@ -1,7 +1,7 @@
 <?php
-require_once File::build_path(array("model", "modelING"));
+require_once File::build_path(array("model", "modelIngredient.php"));
 
-class ControllerING {
+class ControllerIngredient {
     protected static $object = "Ingredient";
 
     public static function readall() {
