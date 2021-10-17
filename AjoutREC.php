@@ -1,6 +1,6 @@
 <h2> Ajout recette </h2>
 <?php
-$Progression_REC = htmlspecialchars($v->getProgression_REC());
+$Progression_REC = htmlspecialchars($v->getProgression_REC()); //TODO: je sais pas si les trucs là sont utiles ou juste le form et aussi comment on check si les champs sont correctement remplis ?
 $Libelle_REC = htmlspecialchars($v->getLibelle_REC());
 $ChargesSup_REC = htmlspecialchars($v->getChargesSup_REC());
 $CoutPersonnel_REC = htmlspecialchars($v->getCoutPersonnel_REC());
