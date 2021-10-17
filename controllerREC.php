@@ -7,7 +7,7 @@ class controllerREC {
     public static function readall() {
         $view='listREC';
         $pagetitle='Liste des fiches techniques existantes';
-        $tab_r = modelrecette::selectAll();
+        $tab_r = modelRecette::selectAll();
         require File::build_path(array("view", "view.php"));
     }
 }
