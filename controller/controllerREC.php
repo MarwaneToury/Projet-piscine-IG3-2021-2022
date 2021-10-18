@@ -13,3 +13,4 @@ class ControllerREC {
     // ça c'est pour la liste en bas à gauche qui montre toutes les FT
     // TODO : après faudras qu'en en prenne qu'un seul ( celui qui est sélectionné et qu'on recup ses infos )
 }
+?>
