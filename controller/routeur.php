@@ -13,7 +13,7 @@ else
  */
 
 //TODO
-$_GET['controller'] = 'Controller' . ucfirst(isset($_GET['controller'])
+$_GET['controller'] = 'controller' . ucfirst(isset($_GET['controller'])
         ? $_GET["controller"] : 'Ingredient'); // Ordre de privilège : $_GET['controller'] Sinon $_COOKIE['preference'] Sinon 'Voiture'
 /*
 $_GET['controller'] = 'controller' . ucfirst(isset($_GET['controller'])
