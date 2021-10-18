@@ -98,7 +98,8 @@ class ModelIngredient extends model
 
         $rep = Model::$pdo->query("SELECT * FROM Ingredient i JOIN Tva t ON i.Code_TVA=t.Code_TVA
                 JOIN Unite u on u.Code_UNI=i.Code_UNI
-                JOIN CategorieIngredient c on c.Code_CAT=i.Code_CAT;");
+                JOIN CategorieIngredient c on c.Code_CAT=i.Code_CAT
+                ORDER BY c.Libelle_CAT, i.Libelle_ING ASC;");
         $rep->setFetchMode(PDO::FETCH_CLASS, "$class_name");
         return $rep->fetchAll();
     }
