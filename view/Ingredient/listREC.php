@@ -23,70 +23,70 @@ foreach ($tab_r as $r) { //TODO: Check si je fais pas de la merde là aussi
     $Code_CAT2_HTML = htmlspecialchars($r->getCode_CAT2());
     echo "
     <p>
-        Fiche technique de libellé
+        Libellé
         <a href='index.php?action=read&libelle=$libelle_REC_URL'>
             $libelle_REC_HTML
         </a>
     </p>";
     echo "
        <p>
-           Fiche technique d'auteur
+           Auteur 
            <a href='index.php?action=read&AUT= $Code_AUT_URL'>
                 $Code_AUT_HTML
            </a>
        </p>";
     echo "
        <p>
-           Fiche technique de code
+           Code 
            <a href='index.php?action=read&Code=$Code_REC_URL'>
                $Code_REC_HTML
            </a>
        </p>";
     echo "
        <p>
-           Fiche technique de coeff
+           Coefficient 
            <a href='index.php?action=read&Coeff= $CoeffCout_REC_URL'>
                $CoeffCout_REC_HTML
            </a>
        </p>";
     echo "
        <p>
-           Fiche technique d'assaisonnement'
+           Assaisonement 
            <a href='index.php?action=read&Assaisonnement=$Assaisonement_REC_URL'>
                $Assaisonement_REC_HTML
            </a>
        </p>";
     echo "
        <p>
-           Fiche technique de coût de personnel
+           Coût de personnel 
            <a href='index.php?action=read&CoutPersonnel= $CoutPersonnel_REC_URL'>
                 $CoutPersonnel_REC_HTML
            </a>
        </p>";
     echo "
        <p>
-           Fiche technique de charges supplémentaires
+           Charges supplémentaires
            <a href='index.php?action=read&ChargesSup= $ChargesSup_REC_URL'>
                $ChargesSup_REC_HTML
            </a>
        </p>";
     echo "
        <p>
-           Fiche technique de Progression
+           Progression
            <a href='index.php?action=read&Progression=$Progression_REC_URL'>
                $Progression_REC_HTML
            </a>
        </p>";
     echo "
        <p>
-           Fiche technique de catégorie
+           Catégorie
            <a href='index.php?action=read&CAT2=$Code_CAT2_URL'>
                $Code_CAT2_HTML
            </a>
        </p>";
     echo "
        <p>
-           Fiche technique de coût
+           Coût total
            <a href='index.php?action=read&Cout=$Cout_REC_URL'>
                 $Cout_REC_HTML
            </a>

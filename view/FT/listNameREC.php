@@ -7,14 +7,14 @@ foreach ($tab_r as $r) { //TODO: Check si je fais pas de la merde
     $Code_AUT_HTML = htmlspecialchars($r->getCode_AUT());
     echo "
     <p>
-        Fiche technique de libellé
+        Libellé
         <a href='index.php?action=read&libelle=$libelle_REC_URL'>
             $libelle_REC_HTML
         </a>
     </p>";
     echo "
         <p>
-            Fiche technique d'auteur
+            Auteur 
             <a href='index.php?action=read&AUT=$Code_AUT_URL'>
                 $Code_AUT_HTML
             </a>
