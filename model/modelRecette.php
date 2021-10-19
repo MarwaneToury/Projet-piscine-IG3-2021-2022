@@ -12,7 +12,9 @@ class modelRecette extends model
     private $Libelle_REC;
     private $Progression_REC;
     private $Code_CAT2;
+    private $Libelle_CAT2;
     private $Code_AUT;
+    private $Nom_AUT;
     protected static $object = "Recette";
     protected static $primary = "Code_REC";
 
@@ -61,9 +63,19 @@ class modelRecette extends model
         return $this->Code_CAT2;
     }
 
+    public function getLibelle_CAT2()
+    {
+        return $this->Libelle_CAT2;
+    }
+
     public function getCode_AUT()
     {
         return $this->Code_AUT;
+    }
+
+    public function getNom_AUT()
+    {
+        return $this->Nom_AUT;
     }
 
     public function __construct($data = NULL)
@@ -78,8 +90,21 @@ class modelRecette extends model
             $this->Libelle_REC = $data[6];
             $this->Progression_REC = $data[7];
             $this->Code_CAT2 = $data[8];
-            $this->Code_AUT= $data[9];
+            $this->Code_AUT = $data[9];
+            $this->Nom_AUT = $data[11];
+            $this->Libelle_CAT2 = $data[13];
         }
+    }
+
+    public static function selectAll()
+    {
+        $class_name = 'Model' . ucfirst(static::$object);
+
+        $rep = Model::$pdo->query("SELECT * FROM Recette r JOIN Auteur a ON r.Code_AUT=a.Code_AUT
+                        JOIN Categorie c on r.Code_CAT2=c.Code_CAT2
+                        ORDER BY c.Libelle_CAT2, r.Libelle_REC ASC;");
+        $rep->setFetchMode(PDO::FETCH_CLASS, "$class_name");
+        return $rep->fetchAll();
     }
 }
 
