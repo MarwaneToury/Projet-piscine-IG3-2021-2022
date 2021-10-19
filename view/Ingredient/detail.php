@@ -1,5 +1,6 @@
-<h2> Détail de l'ingrédient </h2>
+<h3> Détail de l'ingrédient </h3>
 <?php
+//TODO: la vue a un intérêt ?
 $vCode_ING = htmlspecialchars($v->getCode_ING());
 $vLibelleING = htmlspecialchars($v->getLibelleING());
 $vPrixING = htmlspecialchars($v->getPrixING());
