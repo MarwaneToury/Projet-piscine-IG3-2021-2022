@@ -10,5 +10,32 @@ class ControllerIngredient {
         $tab_i = ModelIngredient::selectAll();
         require File::build_path(array("view", "view.php"));
     }
+
+    public static function update()
+    {
+        $pagetitle = 'Modification de l\'ingrédient';
+        $view = 'update';
+        $iCode_ING = ModelIngredient::select($_GET['code_ing']);
+        $iLibelle_ING = $iCode_ING->getLibelleING();
+        $iLibelle_CAT = $iCode_ING->getLibelleCAT();
+        $iPrix_ING = $iCode_ING->getPrixING();
+        $iEstAllergene_ING = $iCode_ING->getEstAllergeneING();
+        $iQuantiteStock_ING = $iCode_ING->getQuantiteStockING();
+        $iLibelle_UNI = $iCode_ING->getLibelleUNI();
+        $iValeur_TVA = $iCode_ING->getValeurTVA();
+        $StateImmatField = "readonly";
+        $action = "updated";
+        require File::build_path(array("view", "view.php"));
+    }
+
+    public static function updated()
+    {
+        ModelIngredient::update($_POST);
+        $immat = $_POST['immatriculation'];
+        $pagetitle = 'Résultat';
+        $view = 'updated';
+        $tab_v = ModelVoiture::selectAll();
+        require File::build_path(array("view", "view.php"));
+    }
 }
 ?>

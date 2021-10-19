@@ -2,6 +2,7 @@
 <?php
 echo "
 <form method='get' action='index.php'>
+    <input type='hidden' name='controller' value='Ingredient'
 	<input type='hidden' name='action' value='create'/>
 	<button type='submit'>Ajouter un ingrédient</button>
 </form>";
@@ -17,8 +18,8 @@ foreach ($tab_i as $i) {
         echo "<h4>$iLibelle_CAT_HTML</h4>";
     }
 
-    $iCode_ING_URL = rawurlencode($i->getCode_ING());
-    $iCode_ING_HTML = htmlspecialchars($i->getCode_ING());
+    $iCode_ING_URL = rawurlencode($i->getCodeING());
+    $iCode_ING_HTML = htmlspecialchars($i->getCodeING());
     $iLibelle_ING_HTML = htmlspecialchars($i->getLibelleING());
     $iPrix_ING_HTML = htmlspecialchars($i->getPrixING());
     $iQuantiteStock_ING_HTML = htmlspecialchars($i->getQuantiteStockING());

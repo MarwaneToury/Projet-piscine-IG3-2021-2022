@@ -19,7 +19,7 @@ class ModelIngredient extends model
     protected static $object = "Ingredient";
     protected static $primary = 'Code_ING';
 
-    public function getCode_ING()
+    public function getCodeING()
     {
         return $this->Code_ING;
     }
