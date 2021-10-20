@@ -21,24 +21,28 @@ echo "
 			<input type='text' placeholder='Ex : Renault' value='$iLibelle_CAT' name='Libelle_CAT' required/>
 		</p>
 		<p>
-			<label for='Prix_ING_id'>Couleur</label> :
+			<label for='Prix_ING_id'>Prix</label> :
 			<input type='text' placeholder='Ex : Noir' value='$iPrix_ING' name='Prix_ING' required/>
 		</p>
 		<p>
-			<label for='Prix_ING_id'>Couleur</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iEstAllergene_ING' name='Prix_ING' required/>
+			<label for='EstAllergene_ING_id'>Est Allergène</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iEstAllergene_ING' name='EstAllergene_ING' required/>
+			<select name='EstAllergene_ING'>
+                <option value='1'>Oui</option>
+                <option value='0' selected>Non</option>
+            </select>
 		</p>
 		<p>
-			<label for='Prix_ING_id'>Couleur</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iQuantiteStock_ING' name='Prix_ING' required/>
+			<label for='QuantiteStock_ING_id'>Quantité</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iQuantiteStock_ING' name='QuantiteStock_ING' required/>
 		</p>
 		<p>
-			<label for='Prix_ING_id'>Couleur</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iLibelle_UNI' name='Prix_ING' required/>
+			<label for='Libelle_UNI_id'>Unité</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iLibelle_UNI' name='Libelle_UNI' required/>
 		</p>
 		<p>
-			<label for='Prix_ING_id'>Couleur</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iValeur_TVA' name='Prix_ING' required/>
+			<label for='Valeur_TVA_id'>TVA</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iValeur_TVA' name='Valeur_TVA' required/>
 		</p>
 		<p>
 			<input type='submit' value='Envoyer' />
