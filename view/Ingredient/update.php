@@ -1,24 +1,44 @@
 <?php
-$immat = htmlspecialchars($immat);
-$marque = htmlspecialchars($marque);
-$couleur = htmlspecialchars($couleur);
+$iLibelle_ING = htmlspecialchars($iLibelle_ING);
+$iLibelle_CAT = htmlspecialchars($iLibelle_CAT);
+$iPrix_ING = htmlspecialchars($iPrix_ING);
+$iEstAllergene_ING = htmlspecialchars($iEstAllergene_ING);
+$iQuantiteStock_ING = htmlspecialchars($iQuantiteStock_ING);
+$iLibelle_UNI = htmlspecialchars($iLibelle_UNI);
+$iValeur_TVA = htmlspecialchars($iValeur_TVA);
 $controller = static::$object;
 echo "
-<h2> Formulaire pour voiture </h2>
+<h2> Formulaire pour ingrédient </h2>
 <form method='post' action='index.php?controller=$controller&action=$action'>
 	<fieldset>
 		<legend>Mon formulaire :</legend>
 		<p>
-			<label for='immat_id'>Immatriculation</label> :
-			<input $StateImmatField type='text' placeholder='Ex : 256AB34' value='$immat' name='immatriculation' required/>
+			<label for='Libelle_ING_id'>Libellé</label> :
+			<input type='text' placeholder='Ex : Banane' value='$iLibelle_ING' name='Libelle_ING' required/>
 		</p>
 		<p>
-			<label for='marque_id'>Marque</label> :
-			<input type='text' placeholder='Ex : Renault' value='$marque' name='marque' required/>
+			<label for='Libelle_CAT_id'>Catégorie</label> :
+			<input type='text' placeholder='Ex : Renault' value='$iLibelle_CAT' name='Libelle_CAT' required/>
 		</p>
 		<p>
-			<label for='couleur_id'>Couleur</label> :
-			<input type='text' placeholder='Ex : Noir' value='$couleur' name='couleur' required/>
+			<label for='Prix_ING_id'>Couleur</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iPrix_ING' name='Prix_ING' required/>
+		</p>
+		<p>
+			<label for='Prix_ING_id'>Couleur</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iEstAllergene_ING' name='Prix_ING' required/>
+		</p>
+		<p>
+			<label for='Prix_ING_id'>Couleur</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iQuantiteStock_ING' name='Prix_ING' required/>
+		</p>
+		<p>
+			<label for='Prix_ING_id'>Couleur</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iLibelle_UNI' name='Prix_ING' required/>
+		</p>
+		<p>
+			<label for='Prix_ING_id'>Couleur</label> :
+			<input type='text' placeholder='Ex : Noir' value='$iValeur_TVA' name='Prix_ING' required/>
 		</p>
 		<p>
 			<input type='submit' value='Envoyer' />

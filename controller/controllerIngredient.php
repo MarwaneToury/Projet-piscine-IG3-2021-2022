@@ -23,7 +23,6 @@ class ControllerIngredient {
         $iQuantiteStock_ING = $iCode_ING->getQuantiteStockING();
         $iLibelle_UNI = $iCode_ING->getLibelleUNI();
         $iValeur_TVA = $iCode_ING->getValeurTVA();
-        $StateImmatField = "readonly";
         $action = "updated";
         require File::build_path(array("view", "view.php"));
     }
