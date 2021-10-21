@@ -7,7 +7,7 @@ class ControllerREC {
     public static function readall() {
         $view='list';
         $pagetitle='Liste des fiches techniques existantes';
-        $tab_r = modelRecette::selectAll();
+        $tab_r = ModelRecette::selectAll();
         require File::build_path(array("view", "view.php"));
     }
     // ça c'est pour la liste en bas à gauche qui montre toutes les FT

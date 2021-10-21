@@ -9,8 +9,8 @@ echo "
 $iCode_CAT_HTML = htmlspecialchars($tab_i[0]->getCodeCAT());
 $iLibelle_CAT_HTML = htmlspecialchars($tab_i[0]->getLibelleCAT());
 echo "<h4>$iLibelle_CAT_HTML</h4>";
-foreach ($tab_i as $i) {
-
+foreach ($tab_i as $i)
+{
     if ($i->getCodeCAT() != $iCode_CAT_HTML)
     {
         $iCode_CAT_HTML = htmlspecialchars($i->getCodeCAT());

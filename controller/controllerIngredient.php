@@ -1,5 +1,7 @@
 <?php
 require_once File::build_path(array("model", "modelIngredient.php"));
+require_once File::build_path(array("model", "modelTva.php"));
+require_once File::build_path(array("model", "modelUnite.php"));
 
 class ControllerIngredient {
     protected static $object = "Ingredient";
@@ -23,6 +25,8 @@ class ControllerIngredient {
         $iQuantiteStock_ING = $iCode_ING->getQuantiteStockING();
         $iLibelle_UNI = $iCode_ING->getLibelleUNI();
         $iValeur_TVA = $iCode_ING->getValeurTVA();
+        $tab_TVA = ModelTva::selectAll();
+        $tab_UNI = ModelUnite::selectAll();
         $action = "updated";
         require File::build_path(array("view", "view.php"));
     }
@@ -33,7 +37,7 @@ class ControllerIngredient {
         $immat = $_POST['immatriculation'];
         $pagetitle = 'Résultat';
         $view = 'updated';
-        $tab_v = ModelVoiture::selectAll();
+        $tab_v = ModelIngredient::selectAll();
         require File::build_path(array("view", "view.php"));
     }
 }
