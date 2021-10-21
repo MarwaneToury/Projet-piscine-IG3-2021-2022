@@ -1,7 +1,7 @@
 <?php 
 require_once "model.php";
 
-class modelUnite extends model
+class ModelUnite extends model
 {
     private $Code_UNI;
     private $Libelle_UNI;

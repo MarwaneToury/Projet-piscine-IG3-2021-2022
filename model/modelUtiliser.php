@@ -1,7 +1,7 @@
 <?php 
 require_once "model.php";
 
-class modelUtiliser extends model
+class ModelUtiliser extends model
 {
     private $Code_ING;
     private $Code_REC;

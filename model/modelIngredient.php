@@ -84,11 +84,11 @@ class ModelIngredient extends model
             $this->EstAllergene_ING = $data[3];
             $this->QuantiteStock_ING = $data[4];
             $this->Code_UNI = $data[5];
-            $this->Libelle_UNI = $data[12];
+            $this->Libelle_UNI = $data[11];
             $this->Code_TVA = $data[6];
             $this->Valeur_TVA = $data[9];
             $this->Code_CAT = $data[7];
-            $this->Libelle_CAT = $data[14];
+            $this->Libelle_CAT = $data[13];
         }
     }
 

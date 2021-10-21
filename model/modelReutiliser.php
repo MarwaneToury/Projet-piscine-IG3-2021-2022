@@ -1,7 +1,7 @@
 <?php 
 require_once "model.php";
 
-class modelReutiliser extends model
+class ModelReutiliser extends model
 {
     private $Code_REC;
     private $Code_REC_1;

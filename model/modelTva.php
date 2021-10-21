@@ -1,7 +1,7 @@
 <?php 
 require_once "model.php";
 
-class modelTva extends model
+class ModelTva extends model
 {
     private $Code_TVA;
     private $Valeur_TVA;

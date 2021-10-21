@@ -1,7 +1,7 @@
 <?php 
 require_once "model.php";
 
-class modelAuteur extends model
+class ModelAuteur extends model
 {
     private $Nom_AUT;
     private $Code_AUT;
