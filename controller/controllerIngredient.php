@@ -13,6 +13,30 @@ class ControllerIngredient {
         require File::build_path(array("view", "view.php"));
     }
 
+    public static function create() // pour créer un ingrédient 
+    {
+        $pagetitle = 'Création de l\'ingrédient';
+        $view = 'create';
+        $iLibelle_ING = $_POST['Libelle_ING'];
+        $iLibelle_CAT = $_POST['Libelle_CAT'];
+        $iPrix_ING = $_POST['PRIX_ING'];
+        $iEstAllergene_ING = $_POST['EstAllergene_ING'];
+        $iQuantiteStock_ING = $_POST['QuantiteStock_ING'];
+        $iLibelle_UNI = $_POST['Libelle_UNI'];
+        $iValeur_TVA = $_POST['Valeur_TVA'];
+        $action = "created";
+        require File::build_path(array("view", "view.php"));
+    }
+
+    public static function created() // ingrédient créée avec succès
+    {
+        ModelIngredient::create($_POST);
+        $iLibelle_ING = $_POST['Libelle_ING'];
+        $pagetitle = 'Ingrédient créée';
+        $view = 'created';
+        require File::build_path(array("view", "view.php"));
+    }
+
     public static function update()
     {
         $pagetitle = 'Modification de l\'ingrédient';
@@ -34,10 +58,10 @@ class ControllerIngredient {
     public static function updated()
     {
         ModelIngredient::update($_POST);
-        $immat = $_POST['immatriculation'];
-        $pagetitle = 'Résultat';
+        $iLibelle_ING = $_POST['Libelle_ING'];
+        $pagetitle = 'Ingrédient modifié';
         $view = 'updated';
-        $tab_v = ModelIngredient::selectAll();
+        $tab_v = ModelIngredient::selectAll(); // c'est quoi ça ?
         require File::build_path(array("view", "view.php"));
     }
 }
