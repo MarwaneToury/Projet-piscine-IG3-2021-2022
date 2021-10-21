@@ -21,8 +21,12 @@ class ControllerIngredient {
         $iLibelle_ING = $iCode_ING->getLibelleING();
         $iLibelle_CAT = $iCode_ING->getLibelleCAT();
         $iPrix_ING = $iCode_ING->getPrixING();
-        $iEstAllergene_ING = $iCode_ING->getEstAllergeneING();
+//        $iEstAllergene_ING = $iCode_ING->getEstAllergeneING();
+        $iCode_TVA = $iCode_ING->getCodeTVA();
+        if ($iCode_ING->getEstAllergeneING() == 0) $strAllergene="Non"; else $strAllergene="Oui";
+        $iEstAllergene_ING = $strAllergene;
         $iQuantiteStock_ING = $iCode_ING->getQuantiteStockING();
+        $iCode_UNI = $iCode_ING->getCodeUNI();
         $iLibelle_UNI = $iCode_ING->getLibelleUNI();
         $iValeur_TVA = $iCode_ING->getValeurTVA();
         $tab_TVA = ModelTva::selectAll();

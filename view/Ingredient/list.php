@@ -34,7 +34,7 @@ foreach ($tab_i as $i)
         $iPrix_ING_HTML
         $iEstAllergene_ING_HTML
         $iQuantiteStock_ING_HTML$iLibelle_UNI_HTML
-        $iValeur_TVA_HTML%
+        $iValeur_TVA_HTML
         <form method='get' action='index.php'>
 	        <input type='hidden' name='action' value='update'/>
 	        <input type='hidden' name='code_ing' value='$iCode_ING_URL'/>

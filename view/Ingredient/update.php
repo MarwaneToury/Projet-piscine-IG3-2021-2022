@@ -8,7 +8,6 @@ $iLibelle_UNI = htmlspecialchars($iLibelle_UNI);
 $iValeur_TVA = htmlspecialchars($iValeur_TVA);
 $controller = static::$object;
 
-var_dump($tab_TVA);
 function printAllTVAValues()
 {
     foreach ($tab_TVA as $tva)
@@ -18,7 +17,6 @@ function printAllTVAValues()
         echo "<option value='$tvaValeur_TVA_URL'>$tvaValeur_TVA_HTML</option>";
     }
 }
-//TODO Lexay: changer le selected des différents select/options
 echo "
 <h2> Formulaire pour ingrédient </h2>
 <form method='post' action='index.php?controller=$controller&action=$action'>
@@ -56,7 +54,10 @@ echo "
                 {
                     $tvaLibelle_UNI_HTML = htmlspecialchars($uni->getLibelle_UNI());
                     $tvaLibelle_UNI_URL = rawurlencode($uni->getLibelle_UNI());
-                    echo "<option value='$tvaLibelle_UNI_URL'>$tvaLibelle_UNI_HTML</option>";
+                    if ($uni->getCode_UNI()==$iCode_UNI)
+                        echo "<option value='$tvaLibelle_UNI_URL' selected>$tvaLibelle_UNI_HTML</option>";
+                    else
+                        echo "<option value='$tvaLibelle_UNI_URL'>$tvaLibelle_UNI_HTML</option>";
                 }
 echo       "</select>
 		</p>
@@ -68,7 +69,10 @@ echo       "</select>
                 {
                     $tvaValeur_TVA_HTML = htmlspecialchars($tva->getValeur_TVA());
                     $tvaValeur_TVA_URL = rawurlencode($tva->getValeur_TVA());
-                    echo "<option value='$tvaValeur_TVA_URL'>$tvaValeur_TVA_HTML</option>";
+                    if ($tva->getCode_TVA()==$iCode_TVA)
+                        echo "<option value='$tvaValeur_TVA_URL' selected>$tvaValeur_TVA_HTML</option>";
+                    else
+                        echo "<option value='$tvaValeur_TVA_URL'>$tvaValeur_TVA_HTML</option>";
                 }
 echo       "</select>
 		</p>
