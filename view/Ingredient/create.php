@@ -40,11 +40,27 @@ echo "
 		</p>
 		<p>
 			<label for='Libelle_UNI_id'>Unité</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iLibelle_UNI' name='Libelle_UNI' required/>
+			<!--<input type='text' placeholder='Ex : Kg' value='$iLibelle_UNI' name='Libelle_UNI' required/>-->
+			<select name='Libelle_UNI'>";
+                foreach ($tab_UNI as $uni)
+                {
+                    $tvaLibelle_UNI_HTML = htmlspecialchars($uni->getLibelle_UNI());
+                    $tvaLibelle_UNI_URL = rawurlencode($uni->getLibelle_UNI());
+                    echo "<option value='$tvaLibelle_UNI_URL'>$tvaLibelle_UNI_HTML</option>";
+                }
+echo       "</select>
 		</p>
 		<p>
 			<label for='Valeur_TVA_id'>TVA</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iValeur_TVA' name='Valeur_TVA' required/>
+			<!--<input type='text' placeholder='Ex : Noir' value='$iValeur_TVA' name='Valeur_TVA' required/>-->
+			<select name='Valeur_TVA'>";
+                foreach ($tab_TVA as $tva)
+                {
+                    $tvaValeur_TVA_HTML = htmlspecialchars($tva->getValeur_TVA());
+                    $tvaValeur_TVA_URL = rawurlencode($tva->getValeur_TVA());
+                    echo "<option value='$tvaValeur_TVA_URL'>$tvaValeur_TVA_HTML</option>";
+                }
+echo       "</select>
 		</p>
 		<p>
 			<input type='submit' value='Envoyer' />
