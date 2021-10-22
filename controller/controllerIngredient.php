@@ -13,6 +13,24 @@ class ControllerIngredient {
         require File::build_path(array("view", "view.php"));
     }
 
+    public static function create() // pour créer un ingrédient on envoie les infos des FKs
+    {
+        $pagetitle = 'Création de l\'ingrédient';
+        $view = 'create';
+        $tab_TVA = ModelTva::selectAll(); // On récupère toutes les TVA existantes dans la table
+        $tab_UNI = ModelUnite::selectAll(); // Pareil pour les unités
+        $action = "created";
+        require File::build_path(array("view", "view.php"));
+    }
+
+    public static function created() // ingrédient créée avec succès
+    {
+        ModelIngredient::save($_POST); // On call save du model pour créer la ligne dans la table Ingredient
+        $pagetitle = 'Ingrédient créée';
+        $view = 'created';
+        require File::build_path(array("view", "view.php"));
+    }
+
     public static function update()
     {
         $pagetitle = 'Modification de l\'ingrédient';
@@ -38,10 +56,10 @@ class ControllerIngredient {
     public static function updated()
     {
         ModelIngredient::update($_POST);
-        $immat = $_POST['immatriculation'];
-        $pagetitle = 'Résultat';
+        $iLibelle_ING = $_POST['Libelle_ING'];
+        $pagetitle = 'Ingrédient modifié';
         $view = 'updated';
-        $tab_v = ModelIngredient::selectAll();
+        $tab_v = ModelIngredient::selectAll(); // c'est quoi ça ?
         require File::build_path(array("view", "view.php"));
     }
 }
