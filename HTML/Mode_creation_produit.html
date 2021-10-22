@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mode création produit</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Mode_creation_produit.css">
+</head>
+<body>
+    <div class="page" id="page1"> <!--Cote gauche de la page-->
+        <div class="header"> <!--Haut de la page avec les boutons-->
+            <form id="recherche">
+                <input type="search" placeholder="RECHERCHE" aria-label="Barre de recherche">
+                <button type="submit" aria-label="Bouton de recherche">RECHERCHER</button>
+            </form>
+            <div class="boutons">
+                <button onclick="window.location.href = 'Version_main_page.html';" aria-label="Bouton d'annulation">ANNULER</button>
+                <button onclick="window.location.href = 'Version_main_page.html'" aria-label="Bouton de validation">VALIDER</button>
+            </div>
+        </div>
+        <div>
+            <table id="infos"> <!--Tableau sur les infos d'un produit selectionner-->
+                <tr>
+                    <td>TVA</td>
+                    <td>Code Produit</td>
+                    <td>Prix TTC</td>
+                    <td>Prix HT</td>
+                </tr>
+                <tr>
+                    <td>Nom du Produit</td>
+                    <td>Catégorie</td>
+                    <td>Prix Unitaire</td>
+                    <td>Unité du Produit</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <table id="crea_prdt"> <!--Tableau pour créer son produit-->
+                <caption>Création produit</caption>
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Libellé</th>
+                        <th>Unité</th>
+                        <th>PrixUnitaire</th>
+                        <th>Allèrgène</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div>
+            <table id="liste_prdt"> <!--Liste de tous les produits actuellement dans la mercuriale-->
+                <caption>Liste de tous les produits dans la mercuriale</caption>
+                <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Libellé</th>
+                    <th>Unité</th>
+                    <th>PrixUnitaire</th>
+                    <th>Allèrgène</th>
+                    <th>Colonne6</th>
+                    <th>Colonne7</th>
+                    <th>Colonne8</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="footer"> <!--Bas de page avec le bouton-->
+            <button class="imp">Imprimer Mercuriale</button>
+        </div>
+    </div>
+
+
+    <div class="page" id="page2"> <!--Cote droit de la page-->
+        <div class="header">
+            <div class="boutons">
+                <button disabled>SUPPRIMER</button>
+                <button disabled>EDITER</button>
+                <button>CREER</button>
+            </div>
+        </div>
+
+        <div id="infosFT">
+            <div>
+                <div id="NomFT"> Nom de la Fiche Technique</div>
+            </div>
+            <div id="NbCouverts">
+                <label for="Couverts">Nombre de couverts:</label>
+                <input type="number" id="Couverts" placeholder="ex:6" name="Couverts" required>
+            </div>
+        </div>
+
+        <div id="P&D">
+            <div id="Progression">
+                Progression
+            </div>
+            <div id="Description">
+                Description des ingrédients
+            </div>
+        </div>
+
+        <div id="A&P">
+            <div id="AffFichesTechniques">
+                <ul>
+                    <li>Recette1</li>
+                    <li>Recette2</li>
+                    <li>Recette3</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                    <li>Recette4</li>
+                </ul>
+            </div>
+
+            <div id="PrixEtc">
+                Prix: ...
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="imp" disabled>Imprimer Fiche Technique</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
