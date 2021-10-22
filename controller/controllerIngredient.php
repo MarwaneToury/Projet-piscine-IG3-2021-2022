@@ -2,12 +2,13 @@
 require_once File::build_path(array("model", "modelIngredient.php"));
 require_once File::build_path(array("model", "modelTva.php"));
 require_once File::build_path(array("model", "modelUnite.php"));
+require_once File::build_path(array("model", "modelCategorieIngredient.php"));
 
 class ControllerIngredient {
     protected static $object = "Ingredient";
 
     public static function readall() {
-        $view='list';
+        $view1 = 'list';
         $pagetitle='Liste des Ingrédients';
         $tab_i = ModelIngredient::selectAll();
         require File::build_path(array("view", "view.php"));
@@ -16,7 +17,7 @@ class ControllerIngredient {
     public static function create() // pour créer un ingrédient on envoie les infos des FKs
     {
         $pagetitle = 'Création de l\'ingrédient';
-        $view = 'create';
+        $view1 = 'create';
         $tab_TVA = ModelTva::selectAll(); // On récupère toutes les TVA existantes dans la table
         $tab_UNI = ModelUnite::selectAll(); // Pareil pour les unités
         $action = "created";
@@ -27,17 +28,19 @@ class ControllerIngredient {
     {
         ModelIngredient::save($_POST); // On call save du model pour créer la ligne dans la table Ingredient
         $pagetitle = 'Ingrédient créée';
-        $view = 'created';
+        $view1 = 'created';
         require File::build_path(array("view", "view.php"));
     }
 
     public static function update()
     {
         $pagetitle = 'Modification de l\'ingrédient';
-        $view = 'update';
+        $view1 = 'update';
         $iCode_ING = ModelIngredient::select($_GET['code_ing']);
         $iLibelle_ING = $iCode_ING->getLibelleING();
         $iLibelle_CAT = $iCode_ING->getLibelleCAT();
+        $tab_CAT = ModelCategorieIngredient::selectAll();
+        $iCode_CAT = $iCode_ING->getCodeCAT();
         $iPrix_ING = $iCode_ING->getPrixING();
 //        $iEstAllergene_ING = $iCode_ING->getEstAllergeneING();
         $iCode_TVA = $iCode_ING->getCodeTVA();
@@ -58,7 +61,7 @@ class ControllerIngredient {
         ModelIngredient::update($_POST);
         $iLibelle_ING = $_POST['Libelle_ING'];
         $pagetitle = 'Ingrédient modifié';
-        $view = 'updated';
+        $view1 = 'updated';
         $tab_v = ModelIngredient::selectAll(); // c'est quoi ça ?
         require File::build_path(array("view", "view.php"));
     }

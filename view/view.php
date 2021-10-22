@@ -11,8 +11,13 @@
 <!--        <a href='index.php?controller=utilisateur&action=preference'>Préférence</a>-->
     </h3>
 </header>
-<body>
-    <?php require File::build_path(array("view", static::$object, "$view.php")); ?>
+<body style="display: flex">
+    <div class="page" id="page1" style="flex: 1; position: relative">
+        <?php require File::build_path(array("view", static::$object, "$view1.php")); ?>
+    </div>
+    <div class="page" id="page2" style="flex: 1; position: relative">
+        <?php require File::build_path(array("view", static::$object, "$view2.php")); ?>
+    </div>
 </body>
 <footer>
     <p style="border: 1px solid black;text-align:right;padding-right:1em;">
