@@ -36,20 +36,21 @@ class ControllerIngredient {
     {
         $pagetitle = 'Modification de l\'ingrédient';
         $view1 = 'update';
-        $iCode_ING = ModelIngredient::select($_GET['code_ing']);
-        $iLibelle_ING = $iCode_ING->getLibelleING();
-        $iLibelle_CAT = $iCode_ING->getLibelleCAT();
+        $iToUpdate = ModelIngredient::select($_GET['code_ing']);
+        $iCode_ING = $iToUpdate->getCodeING();
+        $iLibelle_ING = $iToUpdate->getLibelleING();
+        $iLibelle_CAT = $iToUpdate->getLibelleCAT();
         $tab_CAT = ModelCategorieIngredient::selectAll();
-        $iCode_CAT = $iCode_ING->getCodeCAT();
-        $iPrix_ING = $iCode_ING->getPrixING();
-//        $iEstAllergene_ING = $iCode_ING->getEstAllergeneING();
-        $iCode_TVA = $iCode_ING->getCodeTVA();
-        if ($iCode_ING->getEstAllergeneING() == 0) $strAllergene="Non"; else $strAllergene="Oui";
+        $iCode_CAT = $iToUpdate->getCodeCAT();
+        $iPrix_ING = $iToUpdate->getPrixING();
+//        $iEstAllergene_ING = $iToUpdate->getEstAllergeneING();
+        $iCode_TVA = $iToUpdate->getCodeTVA();
+        if ($iToUpdate->getEstAllergeneING() == 0) $strAllergene="Non"; else $strAllergene="Oui";
         $iEstAllergene_ING = $strAllergene;
-        $iQuantiteStock_ING = $iCode_ING->getQuantiteStockING();
-        $iCode_UNI = $iCode_ING->getCodeUNI();
-        $iLibelle_UNI = $iCode_ING->getLibelleUNI();
-        $iValeur_TVA = $iCode_ING->getValeurTVA();
+        $iQuantiteStock_ING = $iToUpdate->getQuantiteStockING();
+        $iCode_UNI = $iToUpdate->getCodeUNI();
+        $iLibelle_UNI = $iToUpdate->getLibelleUNI();
+        $iValeur_TVA = $iToUpdate->getValeurTVA();
         $tab_TVA = ModelTva::selectAll();
         $tab_UNI = ModelUnite::selectAll();
         $action = "updated";
@@ -62,7 +63,7 @@ class ControllerIngredient {
         $iLibelle_ING = $_POST['Libelle_ING'];
         $pagetitle = 'Ingrédient modifié';
         $view1 = 'updated';
-        $tab_v = ModelIngredient::selectAll(); // c'est quoi ça ?
+        $tab_i = ModelIngredient::selectAll();
         require File::build_path(array("view", "view.php"));
     }
 }

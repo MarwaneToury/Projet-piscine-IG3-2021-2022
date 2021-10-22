@@ -81,15 +81,22 @@ class Model
         $table_name = static::$object;
         $primary_key = static::$primary;
         $set = "";
+        $key_value = "";
 
         foreach ($data as $key => $value) {
-            $set = "$set$key=:$key,"; //TODO: isn't it $key=:$value?
+            if ($key=='primary_value')
+            {
+                $key_value = $value;
+                continue;
+            }
+//            $set = "$set$key=:$key,"; //TODO: isn't it $key=:$value?
+            $set = "$set$key='$value',";
         }
         $set = rtrim($set, ",");
 
         $sql = "UPDATE $table_name 
 		SET $set 
-		WHERE $primary_key=:$primary_key";
+		WHERE $primary_key=$key_value";
         $req_prep = Model::$pdo->prepare($sql);
 
         $req_prep->execute($data);
