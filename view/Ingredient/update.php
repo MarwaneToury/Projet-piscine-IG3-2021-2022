@@ -22,12 +22,12 @@ echo "
 			<select name='Libelle_CAT'>";
                 foreach ($tab_CAT as $cat)
                 {
-                    $catLibelle_CAT_HTML = htmlspecialchars($cat->getLibelle_CAT());
-                    $catLibelle_CAT_URL = rawurlencode($cat->getLibelle_CAT());
-                    if ($cat->getCode_UNI()==$iCode_CAT)
-                        echo "<option value='$catLibelle_CAT_URL' selected>$catLibelle_CAT_HTML</option>";
+                    $tvaLibelle_CAT_HTML = htmlspecialchars($cat->getLibelle_CAT());
+                    $tvaLibelle_CAT_URL = rawurlencode($cat->getLibelle_CAT());
+                    if ($cat->getCode_CAT()==$iCode_CAT)
+                        echo "<option value='$tvaLibelle_CAT_URL' selected>$tvaLibelle_CAT_HTML</option>";
                     else
-                        echo "<option value='$catLibelle_CAT_URL'>$catLibelle_CAT_HTML</option>";
+                        echo "<option value='$tvaLibelle_CAT_URL'>$tvaLibelle_CAT_HTML</option>";
                 }
 echo       "</select>
 		</p>
