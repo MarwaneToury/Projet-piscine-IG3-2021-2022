@@ -1,0 +1,145 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 90%;
+    background: grey;
+    display: flex;
+    margin: 1em;
+    overflow: hidden;
+}
+
+body * {
+    margin-bottom: 10px;
+}
+
+.page {
+    flex: 1;
+    position: relative;
+}
+
+#page1, #page2{
+    min-height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#page2 {
+    margin-left: 5px;
+}
+
+.header, #infosFT {
+    display: flex;
+    padding: 5px;
+}
+
+.boutons {
+    flex: 1;
+    margin-right: 5px;
+    text-align: right;
+}
+
+#recherche {
+    flex: 1;
+    margin-left: 5px;
+}
+
+#infosFT {
+    justify-content: space-evenly;
+}
+
+#NomFT, #NbCouverts {
+    padding: 5px;
+    border: 2px solid gray;
+    text-align: center;
+    background: #ffffff;
+}
+
+#NbCouverts {
+    width: 35%;
+}
+
+#NbCouverts input {
+    width: 20%;
+    background: transparent;
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
+caption {
+    text-align: left;
+}
+
+#infos td {
+    border : 2px solid aqua;
+}
+
+#infos {
+    border-collapse: separate;
+    border-spacing : 20px;
+}
+
+#crea_prdt th, #crea_prdt td{
+    border: 3px solid black;
+}
+
+#liste_prdt th, #liste_prdt td{
+    border: 3px dotted darkgrey;
+}
+
+#P\&D {
+    display: flex;
+}
+
+#Progression, #Description {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid gray;
+    text-align: center;
+    background: #ffffff;
+}
+
+#A\&P {
+    display: flex;
+    justify-content: space-between;
+}
+
+#AffFichesTechniques, #PrixEtc {
+    margin: 10px;
+    padding: 5px;
+}
+
+#AffFichesTechniques {
+    max-height: 300px;
+    overflow-y:scroll;
+    border:#000000 1px solid;
+    width: 60%;
+
+}
+
+#PrixEtc {
+    max-height: 20px;
+    width: 15%;
+    border: 2px solid gray;
+    background: #ffffff;
+    text-align: center;
+}
+
+.footer {
+    text-align: right;
+}
+
+.imp {
+    position: relative;
+    right: 10px;
+    bottom: 0;
+    border: 6px solid #fcba03;
+    border-radius: 10px 100px / 120px;
+}
