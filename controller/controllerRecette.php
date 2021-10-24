@@ -10,7 +10,7 @@ class ControllerREC {
         $tab_r = ModelRecette::selectAll();
         require File::build_path(array("view", "view.php"));
     }
-    // ça c'est pour la liste en bas à gauche qui montre toutes les FT
+    // ça c'est pour la liste en bas à gauche qui montre toutes les Recette
     // TODO : après faudras qu'en en prenne qu'un seul ( celui qui est sélectionné et qu'on recup ses infos )
 }
 ?>

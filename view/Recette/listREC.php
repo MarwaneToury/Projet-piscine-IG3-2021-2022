@@ -2,7 +2,7 @@
 <?php
 echo "
 <form method='get' action='index.php'>
-    <input type='hidden' name='controller2' value='FT'
+    <input type='hidden' name='controller2' value='Recette'
 	<input type='hidden' name='action2' value='create'/>
 	<button type='submit'>Ajouter une fiche technique</button>
 </form>"; // Pas sûre de ce que j'ai mit dans value

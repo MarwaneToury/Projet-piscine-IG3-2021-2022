@@ -8,7 +8,7 @@ $rChargesSup_REC; = htmlspecialchars($rChargesSup_REC;);
 $rCoutPersonnel_REC = htmlspecialchars($rCoutPersonnel_REC);
 $rProgression_REC; = htmlspecialchars($rProgression_REC;);
 $rLibelle_CAT2; = htmlspecialchars($rLibelle_CAT2);
-$rNom_AUT; = htmlspecialchars($rNom_AUT;);
+$rNom_AUT; = htmlspecialchars($rNom_AUT);
 $controller2 = static::$object;
 echo "
 <h2> Formulaire pour fiche technique </h2>
