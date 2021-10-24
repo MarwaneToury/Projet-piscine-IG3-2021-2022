@@ -1,4 +1,5 @@
 <?php
+$rCode_REC_URL = rawurlencode($rCode_REC);
 $rLibelle_REC = htmlspecialchars($rLibelle_REC);
 $rCout_REC = htmlspecialchars($rCout_REC);
 $rCoeffCout_REC = htmlspecialchars($rCoeffCout_REC);
