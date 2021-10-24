@@ -1,21 +1,20 @@
+<h3> Création recette </h3>
 <?php
-$rCode_REC_URL = rawurlencode($rCode_REC);
+$rProgression_REC = htmlspecialchars($rProgression_REC);
 $rLibelle_REC = htmlspecialchars($rLibelle_REC);
-$rCout_REC = htmlspecialchars($rCout_REC);
-$rCoeffCout_REC = htmlspecialchars($rCoeffCout_REC);
-$rAssaisonement_REC = htmlspecialchars($rAssaisonement_REC);
-$rChargesSup_REC; = htmlspecialchars($rChargesSup_REC;);
+$rChargesSup_REC = htmlspecialchars($rChargesSup_REC);
 $rCoutPersonnel_REC = htmlspecialchars($rCoutPersonnel_REC);
-$rProgression_REC; = htmlspecialchars($rProgression_REC;);
-$rLibelle_CAT2; = htmlspecialchars($rLibelle_CAT2);
-$rNom_AUT; = htmlspecialchars($rNom_AUT;);
-$controller = static::$object;
+$rAssaisonement_REC = htmlspecialchars($rAssaisonement_REC);
+$rCoeffCout_REC = htmlspecialchars($rCoeffCout_REC);
+$rCout_REC = htmlspecialchars($rCout_REC);
+$rNom_AUT = htmlspecialchars($rNom_AUT);
+$rLibelle_CAT2 = htmlspecialchars($rLibelle_CAT2);
+$controller2 = static::$object2;
 echo "
-<h2> Formulaire pour fiche technique </h2>
-<form method='post' action='index.php?controller=$controller&action=$action'>
-	<fieldset>
-		<legend>Mon formulaire :</legend>
-		<input type='hidden' name='primary_value' value='$rCode_REC_URL'/>
+<h2> Formulaire create fiche technique </h2>
+<form method='post' action='index.php?controller2=$controller2&action2=$action2'>
+    <fieldset>
+        <legend>Mon formulaire :</legend>
         <p>
             <label for='Progression_REC_id'>Progression</label> :
         	<input type='text' placeholder='Ex : Banane' value='$rProgression_REC' name='Progression_REC' required/>

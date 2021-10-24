@@ -1,29 +1,30 @@
 <?php
 require_once File::build_path(array("controller", "controllerIngredient.php"));
+require_once File::build_path(array("controller", "controllerRecette.php"));
 
-if (isset($_GET['action']))
-    $action = $_GET['action'];
+if (isset($_GET['action1']))
+    $action1 = $_GET['action1'];
 else
-    $action = "readall";
-/*
-if (isset($_GET['action']))
-    $action = $_GET['action'];
-else
-    $action = "readall";
- */
+    $action1 = "readall";
 
-//TODO
-$_GET['controller'] = 'controller' . ucfirst(isset($_GET['controller'])
-        ? $_GET["controller"] : 'Ingredient'); // Ordre de privilège : $_GET['controller'] Sinon $_COOKIE['preference'] Sinon 'Voiture'
-/*
-$_GET['controller'] = 'controller' . ucfirst(isset($_GET['controller'])
-        ? $_GET["controller"] : (isset($_COOKIE['preference'])
-        ? $_COOKIE['preference'] : 'Voiture')); // Ordre de privilège : $_GET['controller'] Sinon $_COOKIE['preference'] Sinon 'Voiture'
-*/
-
-//$_GET['controller']::{$_GET['action']}();
-if (class_exists($_GET['controller']) && in_array($action, get_class_methods($_GET['controller'])))
-    $_GET['controller']::$action();
+if (isset($_GET['action2']))
+    $action2 = $_GET['action2'];
 else
-    echo "Error, invalid action $action";
+    $action2 = "readall";
+
+$_GET['controller1'] = 'controller' . ucfirst(isset($_GET['controller1'])
+        ? $_GET["controller1"] : 'Ingredient');
+
+$_GET['controller2'] = 'controller' . ucfirst(isset($_GET['controller2'])
+        ? $_GET["controller2"] : 'Recette');
+
+if (class_exists($_GET['controller1']) && in_array($action1, get_class_methods($_GET['controller1'])))
+    $_GET['controller1']::$action1();
+else
+    echo "Error, invalid action $action1";
+
+if (class_exists($_GET['controller2']) && in_array($action2, get_class_methods($_GET['controller2'])))
+    $_GET['controller2']::$action2();
+else
+    echo "Error, invalid action $action2";
 ?>

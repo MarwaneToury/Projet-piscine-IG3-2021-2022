@@ -7,11 +7,11 @@ $iQuantiteStock_ING = htmlspecialchars($iQuantiteStock_ING);
 $iLibelle_UNI = htmlspecialchars($iLibelle_UNI);
 $iValeur_TVA = htmlspecialchars($iValeur_TVA);
 $iCode_ING_URL = rawurlencode($iCode_ING);
-$controller = static::$object;
+$controller1 = static::$object;
 
 echo "
 <h2> Formulaire pour ingrédient </h2>
-<form method='post' action='index.php?controller=$controller&action=$action'>
+<form method='post' action='index.php?controller1=$controller1&action1=$action1'>
 	<fieldset>
 		<legend>Mon formulaire :</legend>
 		<input type='hidden' name='primary_value' value='$iCode_ING_URL'/>

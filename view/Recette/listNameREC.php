@@ -2,8 +2,8 @@
 <?php
 echo "
 <form method='get' action='index.php'>
-    <input type='hidden' name='controller' value='FT'
-	<input type='hidden' name='action' value='create'/>
+    <input type='hidden' name='controller2' value='Recette'
+	<input type='hidden' name='action2' value='create'/>
 	<button type='submit'>Ajouter une fiche technique</button>
 </form>"; // Pas sûre de ce que j'ai mit dans value
 
@@ -26,7 +26,7 @@ foreach ($tab_r as $r) {
         <p>
             $rLibelle_REC_HTML
             <form method='get' action='index.php'>
-    	        <input type='hidden' name='action' value='update'/>
+    	        <input type='hidden' name='action2' value='update'/>
     	        <input type='hidden' name='code_rec' value='$rCode_REC_URL'/>
     	        <button type='submit'>⚙</button>
             </form>
