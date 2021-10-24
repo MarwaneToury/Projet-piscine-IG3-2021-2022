@@ -4,12 +4,12 @@ $rLibelle_REC = htmlspecialchars($rLibelle_REC);
 $rCout_REC = htmlspecialchars($rCout_REC);
 $rCoeffCout_REC = htmlspecialchars($rCoeffCout_REC);
 $rAssaisonement_REC = htmlspecialchars($rAssaisonement_REC);
-$rChargesSup_REC; = htmlspecialchars($rChargesSup_REC;);
+$rChargesSup_REC = htmlspecialchars($rChargesSup_REC);
 $rCoutPersonnel_REC = htmlspecialchars($rCoutPersonnel_REC);
-$rProgression_REC; = htmlspecialchars($rProgression_REC;);
-$rLibelle_CAT2; = htmlspecialchars($rLibelle_CAT2);
-$rNom_AUT; = htmlspecialchars($rNom_AUT;);
-$controller2 = static::$object;
+$rProgression_REC = htmlspecialchars($rProgression_REC);
+$rLibelle_CAT2 = htmlspecialchars($rLibelle_CAT2);
+$rNom_AUT = htmlspecialchars($rNom_AUT);
+$controller2 = static::$object2;
 echo "
 <h2> Formulaire pour fiche technique </h2>
 <form method='post' action='index.php?controller2=$controller2&action2=$action2'>

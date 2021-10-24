@@ -1,5 +1,6 @@
 <?php
 require_once File::build_path(array("controller", "controllerIngredient.php"));
+require_once File::build_path(array("controller", "controllerRecette.php"));
 
 if (isset($_GET['action1']))
     $action1 = $_GET['action1'];
@@ -15,7 +16,7 @@ $_GET['controller1'] = 'controller' . ucfirst(isset($_GET['controller1'])
         ? $_GET["controller1"] : 'Ingredient');
 
 $_GET['controller2'] = 'controller' . ucfirst(isset($_GET['controller2'])
-        ? $_GET["controller2"] : 'Ingredient');
+        ? $_GET["controller2"] : 'Recette');
 
 if (class_exists($_GET['controller1']) && in_array($action1, get_class_methods($_GET['controller1'])))
     $_GET['controller1']::$action1();
