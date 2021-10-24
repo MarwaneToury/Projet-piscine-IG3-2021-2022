@@ -12,10 +12,10 @@
 </header>
 <body style="display: flex">
     <div class="page" id="page1" style="flex: 1; position: relative">
-        <?php require File::build_path(array("view", static::$object, "$view1.php")); ?>
+        <?php require File::build_path(array("view", $object, "$view1.php")); ?>
     </div>
     <div class="page" id="page2" style="flex: 1; position: relative">
-        <?php require File::build_path(array("view", static::$object2, "$view2.php")); ?>
+        <?php require File::build_path(array("view", $object2, "$view2.php")); ?>
     </div>
 </body>
 <footer>

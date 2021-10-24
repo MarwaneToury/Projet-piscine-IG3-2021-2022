@@ -3,12 +3,13 @@ require_once File::build_path(array("model", "modelRecette.php"));
 require_once File::build_path(array("model", "modelAuteur.php"));
 require_once File::build_path(array("model", "modelCategorie.php"));
 
-class ControllerREC {
-    protected static $object2 = "Recette";
+class ControllerRecette {
+    protected static $object2 = "Recette"; //à suppr ?
 
     public static function readall() {
-        $view2='listREC';
-        $pagetitle='Liste des fiches techniques existantes'; //TODO: à changer
+        $object2 = "Recette";
+        $view2 = 'listREC';
+        $pagetitle = 'Liste des fiches techniques existantes'; //TODO: à changer !
         $tab_r = ModelRecette::selectAll();
         require File::build_path(array("view", "view.php"));
     }

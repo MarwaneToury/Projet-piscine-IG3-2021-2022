@@ -7,15 +7,15 @@ echo "
 	<button type='submit'>Ajouter une fiche technique</button>
 </form>"; // Pas sûre de ce que j'ai mit dans value
 
-$rCode_AUT_URL = rawurlencode($r->getCode_AUT());
-$rNom_AUT_URL = htmlspecialchars($tab_i[0]->getNom_AUT()); //Check l'indice dans la table
-echo "<h4>$Nom_AUT_URL</h4>";
+$rCode_AUT_URL = rawurlencode($tab_r[0]->getCode_AUT());
+$rNom_AUT_HTML = htmlspecialchars($tab_r[0]->getNom_AUT()); //Check l'indice dans la table
+echo "<h4>$rNom_AUT_HTML</h4>";
 
 foreach ($tab_r as $r)
 { //TODO: Check si je fais pas de la merde là aussi
     if ($r->getCode_AUT() != $rCode_AUT_HTML) {
-        $rCode_AUT_HTML = htmlspecialchars($i->getCode_AUT());
-        $rNom_AUT_HTML = htmlspecialchars($i->getNom_AUT());
+        $rCode_AUT_HTML = htmlspecialchars($r->getCode_AUT());
+        $rNom_AUT_HTML = htmlspecialchars($r->getNom_AUT());
         echo "<h4>$rNom_AUT_HTML</h4>";
     }
     $rLibelle_REC_HTML = htmlspecialchars($r->getLibelle_REC());

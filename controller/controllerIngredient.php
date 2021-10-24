@@ -5,9 +5,10 @@ require_once File::build_path(array("model", "modelUnite.php"));
 require_once File::build_path(array("model", "modelCategorieIngredient.php"));
 
 class ControllerIngredient {
-    protected static $object = "Ingredient";
+    protected static $object = "Ingredient"; //à suppr ?
 
     public static function readall() {
+        $object = "Ingredient";
         $view1 = 'list';
         $pagetitle = 'Liste des Ingrédients';
         $tab_i = ModelIngredient::selectAll();
