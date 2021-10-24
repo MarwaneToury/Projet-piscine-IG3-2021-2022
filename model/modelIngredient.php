@@ -104,6 +104,14 @@ class ModelIngredient extends model
         return $rep->fetchAll();
     }
 
+    public static function selectAllLib() {
+        $class_name = 'Model' . ucfirst(static::$object);
+
+        $rep = Model::$pdo->query("SELECT Libelle_ING FROM Ingredient
+                ORDER BY Libelle_ING ASC;");
+        return $rep->fetchAll();
+    }
+
     public static function select($primary_value)
     {
         $table_name = static::$object;

@@ -2,12 +2,12 @@
 <?php
 echo "
 <form method='get' action='index.php'>
-    <input type='hidden' name='controller2' value='Recette'
+    <input type='hidden' name='controller2' value='Recette'/>
 	<input type='hidden' name='action2' value='create'/>
 	<button type='submit'>Ajouter une fiche technique</button>
 </form>"; // Pas sûre de ce que j'ai mit dans value
 
-$rCode_AUT_URL = rawurlencode($tab_r[0]->getCode_AUT());
+$rCode_AUT_HTML = rawurlencode($tab_r[0]->getCode_AUT());
 $rNom_AUT_HTML = htmlspecialchars($tab_r[0]->getNom_AUT()); //Check l'indice dans la table
 echo "<h4>$rNom_AUT_HTML</h4>";
 

@@ -8,6 +8,10 @@ class ModelAuteur extends model
     protected static $object = "Auteur";
     protected static $primary = "Code_AUT";
 
+    public function getAuthor() {
+        return $this;
+    }
+
     public function getCode_AUT()
     {
         return $this->Code_AUT;

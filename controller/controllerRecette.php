@@ -4,19 +4,19 @@ require_once File::build_path(array("model", "modelAuteur.php"));
 require_once File::build_path(array("model", "modelCategorie.php"));
 
 class ControllerRecette {
-    protected static $object2 = "Recette"; //à suppr ?
 
     public static function readall() {
-        $object2 = "Recette";
-        $view2 = 'listREC';
+        $object = "Recette";
+        $view1 = 'listREC';
         $pagetitle = 'Liste des fiches techniques existantes'; //TODO: à changer !
         $tab_r = ModelRecette::selectAll();
         require File::build_path(array("view", "view.php"));
     }
    public static function create()
        {
+           $object = "Recette";
            $pagetitle = 'Création recette';
-           $view2 = 'AjoutREC';
+           $view1 = 'AjoutREC';
            $tab_AUT = ModelAuteur::selectAll();
            $tab_CAT2 = ModelCategorie::selectAll();
            $action = "CreatedREC";
@@ -24,15 +24,18 @@ class ControllerRecette {
        }
    public static function created()
     {
+        $object = "Recette";
         ModelRecette::save($_POST);
         $pagetitle = 'Fiche technique créée';
-        $view2 = 'CreatedREC';
+        $view1 = 'CreatedREC';
+        $rLibelle_REC = $_POST['Libelle_REC'];
+        $tab_r = ModelRecette::selectAll();
         require File::build_path(array("view", "view.php"));
     }
     public static function update()
     { //Pas fini encore
         $pagetitle = 'Modification de la fiche technique';
-        $view2 = 'UpdateREC';
+        $view1 = 'UpdateREC';
         $rToUpdate = ModelRecette::select($_GET['code_rec']);
         $rCode_REC = $rToUpdate->getCode_REC();
         $rLibelle_REC = $rToUpdate->getLibelle_REC();

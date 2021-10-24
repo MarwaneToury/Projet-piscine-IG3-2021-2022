@@ -8,45 +8,41 @@ echo "
 </form>";
 $iCode_CAT_HTML = htmlspecialchars($tab_i[0]->getCodeCAT());
 $iLibelle_CAT_HTML = htmlspecialchars($tab_i[0]->getLibelleCAT());
-$TabLibelles = array();
-foreach($tab_i as $i)
-{
-    array_push($TabLibelles, htmlspecialchars($i->getLibelleING()));
-}
+/* $TabLibString = implode(' ',$Tab_LibI); */
 echo "
     <form id='recherche'>
-                <input id='searchInput' type='search' placeholder='RECHERCHE' aria-label='Barre de recherche'>
-                <div id ='suggestions'></div>
-                <button type='submit' aria-label='Bouton de recherche'>RECHERCHER</button>
+        <input id='searchInput' type='search' placeholder='RECHERCHE' aria-label='Barre de recherche'>
+        <div id ='suggestions'></div>
+        <button type='button' aria-label='Bouton de recherche'>RECHERCHER</button>
     </form>";
 echo "<h4>$iLibelle_CAT_HTML</h4>";
-echo "<script>;
-    phpTabLibs = new Array();
-    <?php foreach($TabLibelles as $Libs) {
-        echo 'phpTabLibs.Push('' . $Libs . '');';
-    };
-    ?>
-    console.log(phpTabLibs);
+echo "<script>
+    let phpTabLibs = new Array();";
+foreach($tab_LibI as $libelle) {
+    echo "phpTabLibs.push('$libelle[0]');";
+}
+echo "console.log(phpTabLibs);
 const searchInput = document.getElementById('searchInput');
 
-searchInput.addEventListener('keyup', function() {
+searchInput.addEventListener('keyup', function()
+{
     const input = searchInput.value;
 
-    const result = TabLibs.filter(item => item.includes(input));
-    
+    const result = phpTabLibs.filter(item => item.includes(input));
+
     console.log(result);
 
     let suggest = '';
 
-    if (input !='') {
-    result.forEach(resultItem => 
-        suggest +=`
-            <div class='suggestion'>${resultItem}</div>
-        `
-    ) }
+    if (input !='')
+    {
+        result.forEach (resultItem => {
+            suggest = suggest + '<div id=\'suggestion\'>'+ resultItem + '</div>';
+        });
+    }
 
     document.getElementById('suggestions').innerHTML = suggest;
-})
+});
 </script>";
 foreach ($tab_i as $i)
 {

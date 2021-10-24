@@ -12,6 +12,7 @@ class ControllerIngredient {
         $view1 = 'list';
         $pagetitle = 'Liste des Ingrédients';
         $tab_i = ModelIngredient::selectAll();
+        $tab_LibI = ModelIngredient::selectAllLib();
         require File::build_path(array("view", "view.php"));
     }
 

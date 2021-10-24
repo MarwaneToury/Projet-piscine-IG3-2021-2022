@@ -18,6 +18,8 @@ class ModelRecette extends model
     protected static $object2 = "Recette";
     protected static $primary = "Code_REC";
 
+    static $object = "Recette";
+
     public function getCode_REC()
     {
         return $this->Code_REC;
