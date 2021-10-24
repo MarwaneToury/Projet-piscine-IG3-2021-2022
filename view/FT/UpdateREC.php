@@ -11,10 +11,11 @@ $rLibelle_CAT2; = htmlspecialchars($rLibelle_CAT2);
 $rNom_AUT; = htmlspecialchars($rNom_AUT;);
 $controller = static::$object;
 echo "
-<h2> Formulaire create fiche technique </h2>
+<h2> Formulaire pour fiche technique </h2>
 <form method='post' action='index.php?controller=$controller&action=$action'>
-    <fieldset>
-        <legend>Mon formulaire :</legend>
+	<fieldset>
+		<legend>Mon formulaire :</legend>
+		<input type='hidden' name='primary_value' value='$rCode_REC_URL'/>
         <p>
             <label for='Progression_REC_id'>Progression</label> :
         	<input type='text' placeholder='Ex : Banane' value='$rProgression_REC' name='Progression_REC' required/>
