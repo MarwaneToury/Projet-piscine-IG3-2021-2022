@@ -7,8 +7,7 @@
 <header style="border: 2px solid black;text-align:center;">
     <h3>
         <a href='index.php?controller1=Ingredient'>Liste des ingrédients</a>
-<!--        <a href='index.php?controller=utilisateur'>Liste des utilisateurs</a>-->
-<!--        <a href='index.php?controller=utilisateur&action=preference'>Préférence</a>-->
+        <a href='index.php?controller2=Recette'>Liste des recettes</a>
     </h3>
 </header>
 <body style="display: flex">
@@ -16,7 +15,7 @@
         <?php require File::build_path(array("view", static::$object, "$view1.php")); ?>
     </div>
     <div class="page" id="page2" style="flex: 1; position: relative">
-        <?php require File::build_path(array("view", static::$object, "$view2.php")); ?>
+        <?php require File::build_path(array("view", static::$object2, "$view2.php")); ?>
     </div>
 </body>
 <footer>

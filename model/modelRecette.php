@@ -15,7 +15,7 @@ class ModelRecette extends model
     private $Libelle_CAT2;
     private $Code_AUT;
     private $Nom_AUT;
-    protected static $object = "Recette";
+    protected static $object2 = "Recette";
     protected static $primary = "Code_REC";
 
     public function getCode_REC()
@@ -98,7 +98,7 @@ class ModelRecette extends model
 
     public static function selectAll()
     {
-        $class_name = 'Model' . ucfirst(static::$object);
+        $class_name = 'Model' . ucfirst(static::$object2);
 
         $rep = Model::$pdo->query("SELECT * FROM Recette r JOIN Auteur a ON r.Code_AUT=a.Code_AUT
                         JOIN Categorie c on r.Code_CAT2=c.Code_CAT2

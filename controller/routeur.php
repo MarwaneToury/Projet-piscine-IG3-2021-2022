@@ -1,5 +1,6 @@
 <?php
 require_once File::build_path(array("controller", "controllerIngredient.php"));
+require_once File::build_path(array("controller", "controllerRecette.php"));
 
 if (isset($_GET['action1']))
     $action1 = $_GET['action1'];

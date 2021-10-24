@@ -1,8 +1,8 @@
 <?php
-require_once File::build_path(array("model", "modelIngredient.php"));
+require_once File::build_path(array("model", "modelRecette.php"));
 
 class ControllerREC {
-    protected static $object = "Recette";
+    protected static $object2 = "Recette";
 
     public static function readall() {
         $view2 = 'list';
