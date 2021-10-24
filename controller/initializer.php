@@ -3,8 +3,8 @@ require_once File::build_path(array("model", "modelIngredient.php"));
 require_once File::build_path(array("model", "modelRecette.php"));
 
 class Initializer {
-    protected static $object = "Ingredient";
-    protected static $object2 = "Recette";
+//    protected static $object = "Ingredient";
+//    protected static $object2 = "Recette";
 
     public static function init() {
 //        $object = "Ingredient";

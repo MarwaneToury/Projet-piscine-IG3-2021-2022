@@ -9,7 +9,7 @@ $rCoeffCout_REC = htmlspecialchars($rCoeffCout_REC);
 $rCout_REC = htmlspecialchars($rCout_REC);
 $rNom_AUT = htmlspecialchars($rNom_AUT);
 $rLibelle_CAT2 = htmlspecialchars($rLibelle_CAT2);
-$controller2 = static::$object2;
+$controller2 = "Recette";
 echo "
 <h2> Formulaire create fiche technique </h2>
 <form method='post' action='index.php?controller2=$controller2&action2=$action2'>

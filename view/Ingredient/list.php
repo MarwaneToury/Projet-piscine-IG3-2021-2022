@@ -16,6 +16,7 @@ echo "
         <button type='submit' aria-label='Bouton de recherche'>RECHERCHER</button>
     </form>";
 echo "<h4>$iLibelle_CAT_HTML</h4>";
+/*
 echo "<script>
 let phpTabLibs = new Array();";
 foreach($Tab_LibI as $Libs) {
@@ -42,7 +43,7 @@ searchInput.addEventListener('keyup', function()
 
     document.getElementById('suggestions').innerHTML = suggest;
 });
-</script>";
+</script>";*/
 foreach ($tab_i as $i)
 {
     if ($i->getCodeCAT() != $iCode_CAT_HTML)

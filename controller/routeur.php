@@ -34,4 +34,6 @@ else
     else
         echo "Error, invalid action $action2";
 }
+
+require File::build_path(array("view", "view.php"));
 ?>
