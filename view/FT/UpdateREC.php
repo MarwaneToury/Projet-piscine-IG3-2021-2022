@@ -9,10 +9,10 @@ $rCoutPersonnel_REC = htmlspecialchars($rCoutPersonnel_REC);
 $rProgression_REC; = htmlspecialchars($rProgression_REC;);
 $rLibelle_CAT2; = htmlspecialchars($rLibelle_CAT2);
 $rNom_AUT; = htmlspecialchars($rNom_AUT;);
-$controller = static::$object;
+$controller2 = static::$object;
 echo "
 <h2> Formulaire pour fiche technique </h2>
-<form method='post' action='index.php?controller=$controller&action=$action'>
+<form method='post' action='index.php?controller2=$controller2&action2=$action2'>
 	<fieldset>
 		<legend>Mon formulaire :</legend>
 		<input type='hidden' name='primary_value' value='$rCode_REC_URL'/>
