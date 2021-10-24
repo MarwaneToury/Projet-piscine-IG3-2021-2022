@@ -16,16 +16,16 @@ echo "
         <button type='submit' aria-label='Bouton de recherche'>RECHERCHER</button>
     </form>";
 echo "<h4>$iLibelle_CAT_HTML</h4>";
-echo "<script>;
-    phpTabLibs = new Array();
-    <?php foreach($Tab_LibI as $Libs) {
-        echo 'phpTabLibs.Push('' . $Libs . '');';
-    };
-    ?>
-    console.log(phpTabLibs);
-    const searchInput = document.getElementById('searchInput');
+echo "<script>
+let phpTabLibs = new Array();";
+foreach($Tab_LibI as $Libs) {
+    echo "phpTabLibs.push($Libs);";
+}
+echo "console.log(phpTabLibs);
+const searchInput = document.getElementById('searchInput');
 
-    searchInput.addEventListener('keyup', function() {
+searchInput.addEventListener('keyup', function()
+{
     const input = searchInput.value;
 
     const result = phpTabLibs.filter(item => item.includes(input));
@@ -34,15 +34,14 @@ echo "<script>;
 
     let suggest = '';
 
-    if (input !='') {
-    result.forEach(resultItem => 
-        suggest +=`
-            <div id='suggestion'>${resultItem}</div>
-        `
-    ) }
+    if (input !='')
+    {
+        result.forEach (resultItem => 
+            suggest += '<div id='suggestion'>${resultItem}</div>')
+    }
 
     document.getElementById('suggestions').innerHTML = suggest;
-})
+});
 </script>";
 foreach ($tab_i as $i)
 {
