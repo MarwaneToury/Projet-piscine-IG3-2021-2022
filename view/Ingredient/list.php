@@ -2,8 +2,8 @@
 <?php
 echo "
 <form method='get' action='index.php'>
-    <input type='hidden' name='controller' value='Ingredient'
-	<input type='hidden' name='action' value='create'/>
+    <input type='hidden' name='controller1' value='Ingredient'
+	<input type='hidden' name='action1' value='create'/>
 	<button type='submit'>Ajouter un ingrédient</button>
 </form>";
 $iCode_CAT_HTML = htmlspecialchars($tab_i[0]->getCodeCAT());
@@ -36,7 +36,7 @@ foreach ($tab_i as $i)
         $iQuantiteStock_ING_HTML$iLibelle_UNI_HTML
         $iValeur_TVA_HTML
         <form method='get' action='index.php'>
-	        <input type='hidden' name='action' value='update'/>
+	        <input type='hidden' name='action1' value='update'/>
 	        <input type='hidden' name='code_ing' value='$iCode_ING_URL'/>
 	        <button type='submit'>⚙</button>
         </form>

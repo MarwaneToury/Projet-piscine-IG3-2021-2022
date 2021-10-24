@@ -5,8 +5,8 @@ class ControllerREC {
     protected static $object = "Recette";
 
     public static function readall() {
-        $view='list';
-        $pagetitle='Liste des fiches techniques existantes';
+        $view2 = 'list';
+        $pagetitle = 'Liste des fiches techniques existantes'; //TODO: à changer !
         $tab_r = ModelRecette::selectAll();
         require File::build_path(array("view", "view.php"));
     }

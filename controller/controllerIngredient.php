@@ -9,7 +9,7 @@ class ControllerIngredient {
 
     public static function readall() {
         $view1 = 'list';
-        $pagetitle='Liste des Ingrédients';
+        $pagetitle = 'Liste des Ingrédients';
         $tab_i = ModelIngredient::selectAll();
         require File::build_path(array("view", "view.php"));
     }
@@ -20,7 +20,7 @@ class ControllerIngredient {
         $view1 = 'create';
         $tab_TVA = ModelTva::selectAll(); // On récupère toutes les TVA existantes dans la table
         $tab_UNI = ModelUnite::selectAll(); // Pareil pour les unités
-        $action = "created";
+        $action1 = "created";
         require File::build_path(array("view", "view.php"));
     }
 
@@ -53,7 +53,7 @@ class ControllerIngredient {
         $iValeur_TVA = $iToUpdate->getValeurTVA();
         $tab_TVA = ModelTva::selectAll();
         $tab_UNI = ModelUnite::selectAll();
-        $action = "updated";
+        $action1 = "updated";
         require File::build_path(array("view", "view.php"));
     }
 
