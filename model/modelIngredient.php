@@ -138,6 +138,33 @@ class ModelIngredient extends model
             return false;
         return $tab[0];
     }
+
+    public static function selectByLib($Libelle)
+    {
+        $table_name = static::$object;
+        $class_name = 'Model' . ucfirst(static::$object);
+        $primary_key = static::$primary; //$primary = nom de la clé primaire de la table
+
+        $sql = "SELECT * FROM Ingredient i JOIN Tva t ON i.Code_TVA=t.Code_TVA
+                JOIN Unite u on u.Code_UNI=i.Code_UNI
+                JOIN CategorieIngredient c on c.Code_CAT=i.Code_CAT
+                WHERE Libelle_ING LIKE '$Libelle%'
+                ORDER BY c.Libelle_CAT, i.Libelle_ING ASC;";
+        $req_prep = Model::$pdo->prepare($sql);
+
+        $values = array(
+            "nom_tag" => $primary_value,
+        );
+        $req_prep->execute($values);
+
+        $req_prep->setFetchMode(PDO::FETCH_CLASS, "$class_name");
+        $tab = $req_prep->fetchAll();
+
+        if (empty($tab))
+            return false;
+        return $tab[0];
+    }
+    
 }
 
 ?>

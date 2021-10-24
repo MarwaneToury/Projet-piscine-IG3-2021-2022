@@ -9,41 +9,7 @@ echo "
 $iCode_CAT_HTML = htmlspecialchars($tab_i[0]->getCodeCAT());
 $iLibelle_CAT_HTML = htmlspecialchars($tab_i[0]->getLibelleCAT());
 /* $TabLibString = implode(' ',$Tab_LibI); */
-echo "
-    <form id='recherche'>
-        <input id='searchInput' type='search' placeholder='RECHERCHE' aria-label='Barre de recherche'>
-        <div id ='suggestions'></div>
-        <button type='submit' aria-label='Bouton de recherche'>RECHERCHER</button>
-    </form>";
-echo "<h4>$iLibelle_CAT_HTML</h4>";
-echo "<script>;
-    phpTabLibs = new Array();
-    <?php foreach($Tab_LibI as $Libs) {
-        echo 'phpTabLibs.Push('' . $Libs . '');';
-    };
-    ?>
-    console.log(phpTabLibs);
-    const searchInput = document.getElementById('searchInput');
 
-    searchInput.addEventListener('keyup', function() {
-    const input = searchInput.value;
-
-    const result = phpTabLibs.filter(item => item.includes(input));
-    
-    console.log(result);
-
-    let suggest = '';
-
-    if (input !='') {
-    result.forEach(resultItem => 
-        suggest +=`
-            <div id='suggestion'>${resultItem}</div>
-        `
-    ) }
-
-    document.getElementById('suggestions').innerHTML = suggest;
-})
-</script>";
 foreach ($tab_i as $i)
 {
     if ($i->getCodeCAT() != $iCode_CAT_HTML)
