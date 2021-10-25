@@ -6,6 +6,29 @@ require_once File::build_path(array("controller", "initializer.php"));
 if (!isset($_GET['action1']) && !isset($_GET['action2']) && !isset($_GET['controller1']) && !isset($_GET['controller2']))
     Initializer::init();
 
+else if (isset($_GET['action1'],$_GET['controller1']) && !isset($_GET['action2']) && !isset($_GET['controller2']))
+{
+    ControllerRecette::readall();
+    $_GET['controller1'] = 'controller' . ucfirst($_GET['controller1']);
+    $_GET['controller1']::$_GET['action1']();
+}
+
+else if (isset($_GET['action2'],$_GET['controller2']) && !isset($_GET['action1']) && !isset($_GET['controller1']))
+{
+    $_GET['controller2'] = 'controller' . ucfirst($_GET['controller2']);
+    $_GET['controller2']::$_GET['action2']();
+    ControllerIngredient::readall();
+}
+
+else
+{
+    $_GET['controller2'] = 'controller' . ucfirst($_GET['controller2']);
+    $_GET['controller1'] = 'controller' . ucfirst($_GET['controller1']);
+    $_GET['controller2']::$_GET['action2']();
+    $_GET['controller1']::$_GET['action1']();
+}
+//require File::build_path(array("view", "view.php"));
+/*
 else
 {
     if (isset($_GET['action1']))
@@ -33,7 +56,7 @@ else
         $_GET['controller2']::$action2();
     else
         echo "Error, invalid action $action2";
-}
 
-require File::build_path(array("view", "view.php"));
+    require File::build_path(array("view", "view.php"));
+}*/
 ?>

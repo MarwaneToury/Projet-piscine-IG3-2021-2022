@@ -37,7 +37,7 @@ foreach ($tab_i as $i)
             <input type='hidden' name='controller1' value='Ingredient'/>
 	        <input type='hidden' name='action1' value='update'/>
 	        <input type='hidden' name='code_ing' value='$iCode_ING_URL'/>
-	        <button type='submit'>⚙</button>
+	        <button type='submit' id='$iCode_ING_URL' class='update'>⚙</button>
         </form>
     </p>";
 }
