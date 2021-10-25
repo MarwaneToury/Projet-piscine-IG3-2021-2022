@@ -7,7 +7,7 @@ $iQuantiteStock_ING = htmlspecialchars($iQuantiteStock_ING);
 $iLibelle_UNI = htmlspecialchars($iLibelle_UNI);
 $iValeur_TVA = htmlspecialchars($iValeur_TVA);
 $iCode_ING_URL = rawurlencode($iCode_ING);
-$controller1 = static::$object;
+$controller1 = "Ingredient";
 
 echo "
 <h2> Formulaire pour ingrédient </h2>

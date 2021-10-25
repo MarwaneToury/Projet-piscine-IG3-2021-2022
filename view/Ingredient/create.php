@@ -8,7 +8,7 @@ $iEstAllergene_ING = htmlspecialchars($iEstAllergene_ING);
 $iQuantiteStock_ING = htmlspecialchars($iQuantiteStock_ING);
 $iLibelle_UNI = htmlspecialchars($iLibelle_UNI);
 $iValeur_TVA = htmlspecialchars($iValeur_TVA);
-$controller1 = static::$object;
+$controller1 = "Ingredient";
 echo "
 <h2> Formulaire create ingrédient </h2>
 <form method='post' action='index.php?controller1=$controller1&action1=$action1'>
