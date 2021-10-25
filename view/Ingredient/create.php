@@ -63,7 +63,7 @@ echo       "</select>
 echo       "</select>
 		</p>
 		<p>
-			<input type='submit' value='Envoyer' />
+			<input id="Valider" type='submit' value='Envoyer' />
 		</p>
 	</fieldset> 
 </form>"

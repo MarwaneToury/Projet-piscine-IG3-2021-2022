@@ -1,7 +1,19 @@
 <h2> Liste des ingrédients </h2>
 <?php
 echo "
-<form method='get' action='index.php'>
+<div class='toast' role='alert' aria-live='assertive' aria-atomic='true'>
+  <div class='toast-header'>
+    <strong class='mr-auto'>Title</strong>
+    <small>5 mins ago</small>
+    <button type='button' class='ml-2 mb-1 close' data-dismiss='toast' aria-label='Close'>
+      <span aria-hidden='true'>&times;</span>
+    </button>
+  </div>
+  <div class='toast-body'>
+    Content... this is a toast message.
+  </div>
+</div>";
+echo "<form method='get' action='index.php'>
     <input type='hidden' name='controller1' value='Ingredient'/>
 	<input type='hidden' name='action1' value='create'/>
 	<button type='submit'>Ajouter un ingrédient</button>

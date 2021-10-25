@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./Toast/Toast.css">
     <title><?php echo $pagetitle; ?></title>
 </head>
 <header style="border: 2px solid black;text-align:center;">
