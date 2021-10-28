@@ -20,15 +20,23 @@ echo "
 		</p>
 		<p>
 			<label for='Libelle_CAT_id'>Catégorie</label> :
-			<input type='text' placeholder='Ex : Renault' value='$iLibelle_CAT' name='Libelle_CAT' required/>
+				<!--<input type='text' placeholder='Ex : Libelle' value='$iLibelle_CAT' name='Libelle_CAT' required/>-->
+				<select name='Libelle_CAT'>";
+					foreach ($tab_CAT as $cat)
+					{
+						$iLibelle_CAT_HTML = htmlspecialchars($cat->getLibelle_CAT());
+						$iLibelle_CAT_URL = rawurlencode($cat->getLibelle_CAT());
+						echo "<option value='$iLibelle_CAT_URL'>$iLibelle_CAT_HTML</option>";
+					}
+	echo       "</select>
 		</p>
 		<p>
 			<label for='Prix_ING_id'>Prix</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iPrix_ING' name='Prix_ING' required/>
+			<input type='text' placeholder='Ex : 4,50' value='$iPrix_ING' name='Prix_ING' required/>
 		</p>
 		<p>
 			<label for='EstAllergene_ING_id'>Est Allergène</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iEstAllergene_ING' name='EstAllergene_ING' required/>
+			<!--<input type='text' placeholder='Ex : Non' value='$iEstAllergene_ING' name='EstAllergene_ING' required/>-->
 			<select name='EstAllergene_ING'>
                 <option value='1'>Oui</option>
                 <option value='0' selected>Non</option>
@@ -36,7 +44,7 @@ echo "
 		</p>
 		<p>
 			<label for='QuantiteStock_ING_id'>Quantité</label> :
-			<input type='text' placeholder='Ex : Noir' value='$iQuantiteStock_ING' name='QuantiteStock_ING' required/>
+			<input type='text' placeholder='Ex : 170' value='$iQuantiteStock_ING' name='QuantiteStock_ING' required/>
 		</p>
 		<p>
 			<label for='Libelle_UNI_id'>Unité</label> :
@@ -63,7 +71,7 @@ echo       "</select>
 echo       "</select>
 		</p>
 		<p>
-			<input type='submit' value='Envoyer' />
+			<input id='Valider' type='submit' value='Envoyer' />
 		</p>
 	</fieldset> 
 </form>"
